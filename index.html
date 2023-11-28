@@ -1,326 +1,492 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:200,100,400"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>Joatan Sampaio - Welcome to my Portfolio</title>
+    <link rel="stylesheet" href="css/style.css?v=1.01" type="text/css" />
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:200,100,400" rel="stylesheet" type="text/css" />
-  <title>Joatan Sampaio - Welcome to my Portfolio</title>
-  <link rel="stylesheet" href="css/style.css?v=1.01" type="text/css">
-  <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
-</head>
+  <body>
+    <div class="wrapper">
+      <div class="next-btn" id="nextBtn">&gt;</div>
+      <div class="prev-btn" id="prevBtn">&lt;</div>
 
-<body>
-  <div class="wrapper">
-    <div class="progress-bar"></div>
-    <div class="next-btn" id="nextBtn">&gt;</div>
-    <div class="prev-btn" id="prevBtn">&lt;</div>
-
-    <div class="navbar">
-      <div class="mobile-menu">
-        <ul class="mobile-menu--items">
-          <li><a class="mobile-menu--link menu-link" href="#intro">Me</a></li>
-          <li><a class="mobile-menu--link menu-link" href="#education">Education</a></li>
-          <li><a class="mobile-menu--link menu-link" href="#experiences">Experiences</a></li>
-          <li><a class="mobile-menu--link menu-link" href="#portfolio">Portfolio</a></li>
-        </ul>
+      <div class="navbar fade-up">
+        <div class="mobile-menu">
+          <ul class="mobile-menu--items">
+            <li><a class="mobile-menu--link menu-link" href="#intro">Me</a></li>
+            <li>
+              <a class="mobile-menu--link menu-link" href="#education"
+                >Education</a
+              >
+            </li>
+            <li>
+              <a class="mobile-menu--link menu-link" href="#experiences"
+                >Experiences</a
+              >
+            </li>
+            <li>
+              <a class="mobile-menu--link menu-link" href="#portfolio"
+                >Portfolio</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="mobile-menu--icon">
+          <input type="checkbox" name="" id="hamb-check" />
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>
+        <div class="menu">
+          <ul class="menu--items">
+            <li><a class="menu-link" href="#intro">About</a></li>
+            <li><a class="menu-link" href="#education">Education</a></li>
+            <li><a class="menu-link" href="#experiences">Experiences</a></li>
+            <li><a class="menu-link" href="#portfolio">Portfolio</a></li>
+          </ul>
+        </div>
+        <div class="theme-btn-container">
+          <span>Theme:</span>
+          <label for="theme-btn" class="switch">
+            <input name="theme-btn" id="theme-btn" type="checkbox" />
+            <span class="theme-slider circle">
+              <img src="images/sun.svg" alt="Moon Icon" />
+              <img src="images/moon.svg" alt="Sun Icon" />
+            </span>
+          </label>
+        </div>
       </div>
-      <div class="mobile-menu--icon">
-        <input type="checkbox" name="" id="hamb-check">
-        <span class="line line1"></span>
-        <span class="line line2"></span>
-        <span class="line line3"></span>
-      </div>
-      <div class="menu">
-        <div class="menu-logo">Joatan<strong>Sampaio</strong></div>
-        <ul class="menu--items">
-          <li><a class="menu-link" href="#intro">About</a></li>
-          <li><a class="menu-link" href="#education">Education</a></li>
-          <li><a class="menu-link" href="#experiences">Experiences</a></li>
-          <li><a class="menu-link" href="#portfolio">Portfolio</a></li>
-        </ul>
-      </div>
-      <div class="theme-btn-container">
-        <span>Theme:</span>
-        <label for="theme-btn" class="switch">
-          <input name="theme-btn" id="theme-btn" type="checkbox">
-          <span class="theme-slider circle">
-            <img src="images/moon.svg" alt="Sun Icon">
-            <img src="images/sun.svg" alt="Moon Icon">
-          </span>
-        </label>
-      </div>
-    </div>
-    <section id="intro" class="horizontal-container">
+      <section id="intro" class="horizontal-container">
+        <section class="horizontal-section">
+          <div class="jelly-container">
+            <div class="jelly"></div>
+            <div class="jelly-animation"></div>
+          </div>
+          <div class="h-s-1-c">
+            <h1 class="fade-down delay-500 header">Hi, I'm Joatan.</h1>
+            <div id="typing_effect" class="cursor fade-down"></div>
 
-      <section class="horizontal-section">
-
-        <div class="h-s-1-c">
-          <h1>Hi, I'm Joatan.</h1>
-          <div id="typing_effect" class="cursor"></div>
-
-          <div class="col anim">
-            <div class="image-container">
-              <img src="images/photoshot-low.jpg" width="300px" alt="">
+            <div class="image-container fade-down">
+              <img src="images/photoshot-low.jpg" alt="A picture of myself" />
             </div>
             <div>
-              <div class="text-container">
+              <div class="text-container fade-up">
                 <p>
-                  <strong>Highlights</strong><br>
-                  🎓 Computer Science student passionate about coding, algorithms, and problem-solving.<br>
-                  💼 Seeking opportunities in the IT industry as an entry-level software engineer.<br>
-                  🌱 Constantly learning and staying updated with the latest technologies.<br>
-                  <strong>Currently Learning</strong><br>
-                  🎯 React, Next.Js<br>
-                  🎯 React Ecosystem: Redux, Redux Thunk, Styled Components and Testing<br>
-                  🎯 TypeScript
+                  <strong>Highlights</strong><br />
+                  Computer Science student passionate about coding, algorithms,
+                  and problem-solving.<br />
+                  Seeking opportunities in the IT industry as an entry-level
+                  software engineer.<br />
+                  Constantly learning and staying updated with the latest
+                  technologies.<br />
+                  <strong>Currently Learning</strong><br />
+                  Vue.js, Vuex, Pinia, Composition API<br />
+                  .NET/C# <br />
+                  TypeScript
                 </p>
-                <a href="https://github.com/joatansampaio"><img class="social-icon" id="github-icon"
-                    src="images/github.svg" alt="GitHub Logo"></a>
-                <a href="https://www.linkedin.com/in/joatansampaio/"><img class="social-icon" id="linkedin-icon"
-                    src="images/linkedin.svg" alt="LinkedIn Logo"></a>
-                <a href="https://www.instagram.com/joatansampaio/"><img class="social-icon" id="instagram-icon"
-                    src="images/insta.svg" alt="Instagram Logo"></a>
-                <a href="mailto:joatansampaio@live.com"><img class="social-icon" id="email-icon" src="images/email.svg"
-                    alt="Email Envelope Icon"></a>
+                <a href="https://github.com/joatansampaio"
+                  ><img
+                    class="social-icon"
+                    id="github-icon"
+                    src="images/github.svg"
+                    alt="GitHub Logo"
+                /></a>
+                <a href="https://www.linkedin.com/in/joatansampaio/"
+                  ><img
+                    class="social-icon"
+                    id="linkedin-icon"
+                    src="images/linkedin.svg"
+                    alt="LinkedIn Logo"
+                /></a>
+                <a href="https://www.instagram.com/joatansampaio/"
+                  ><img
+                    class="social-icon"
+                    id="instagram-icon"
+                    src="images/insta.svg"
+                    alt="Instagram Logo"
+                /></a>
+                <a href="mailto:joatansampaio@live.com"
+                  ><img
+                    class="social-icon"
+                    id="email-icon"
+                    src="images/email.svg"
+                    alt="Email Envelope Icon"
+                /></a>
               </div>
               <div>
-                <a href="/documents/joatan-sampaio-resume-2023.pdf">Download Resume PDF</a>
+                <a
+                  class="download-resume"
+                  href="/documents/joatan-sampaio-resume-2023.pdf"
+                  >Download Resume PDF</a
+                >
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="horizontal-section">
-        <div class="h-s-2-c">
-          <span class="anim">Get To Know Me</span>
-          <div class="anim heading-text">My Hobbies</div>
+        </section>
+        <section class="horizontal-section">
+          <div class="h-s-2-c">
+            <span class="anim">Get To Know Me</span>
+            <div class="anim heading-text">My Hobbies</div>
 
-          <div class="col anim">
-            <div class="col-r">
-              <p>I maintain a diverse range of interests and activities that
-                contribute to my personal. Some of them along critical points of them are:
+            <div class="col anim">
+              <div class="col-r">
+                <p>
+                  I maintain a diverse range of interests and activities that
+                  contribute to my personal. Some of them along critical points
+                  of them are:
+                </p>
+                <ul>
+                  <li>
+                    Programming: Continuous commitment to learning and staying
+                    current with evolving technologies.
+                  </li>
+                  <li>
+                    Snowboarding and Wakeboarding: Adventure, Ability to adapt
+                    to new challenges.
+                  </li>
+                  <li>
+                    Music (Piano and Guitar): Discipline, creativity, and a
+                    passion for the arts.
+                  </li>
+                  <li>
+                    Photography and Design: Eye for detail, aesthetics, and
+                    visual storytelling.
+                  </li>
+                  <li>
+                    Quality Family Time: Work-life balance, Connection, and
+                    Love.
+                  </li>
+                </ul>
+
+                I believe that hobbies and interests complement my professional
+                skills and contribute to a holistic approach to life and work.
+              </div>
+
+              <p>
+                After all, I love what I do, that's why I chose Computer Science
+                as my career.
               </p>
-              <ul>
-                <li>
-                  Programming: Continuous commitment to learning and staying current with evolving
-                  technologies.
-                </li>
-                <li>
-                  Snowboarding and Wakeboarding: Adventure, Ability to adapt to
-                  new challenges.
-                </li>
-                <li>
-                  Music (Piano and Guitar): Discipline, creativity, and a passion for the arts.
-                </li>
-                <li>
-                  Photography and Design: Eye for detail, aesthetics, and visual storytelling.
-                </li>
-                <li>
-                  Quality Family Time: Work-life balance, Connection, and Love.
-                </li>
-              </ul>
-
-              I believe that hobbies and interests complement my professional skills and contribute to a holistic
-              approach to
-              life and work.
-
             </div>
+          </div>
+        </section>
+        <section class="horizontal-section" id="last-h-section">
+          <div class="h-s-3-c">
+            <span class="anim">Future plans</span>
+            <div class="anim heading-text">Career Goals</div>
 
-            <p>After all, I love what I do, that's why I chose Computer Science as my career.</p>
+            <div class="col anim">
+              <p>
+                My primary educational goal is to complete my Associate's Degree
+                in Computer Sience (Fall 2023). This accomplishment will serve
+                as a significant milestone in my academic journey, providing me
+                with a strong foundation in the field. Upon completion of my
+                Associate's Degree, I aim to leverage the Optional Practical
+                Training (OPT) program to gain practical experience in I.T for a
+                duration of one year. This experience will not only enhance my
+                knowledge but also allow me to apply my academic learnings in a
+                real-world professional setting.
+              </p>
+              <p>
+                Ultimately, I am committed to pursuing my Bachelor's Degree in
+                Computer Science (Fall 2026), further solidifying my expertise
+                in this dynamic field. My long-term aspiration is to establish a
+                rewarding career as a Software Engineer. I am passionate about
+                coding, algorithms, and problem-solving, and I am dedicated to
+                staying updated with the latest technologies to excel in this
+                role.
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="regular-section bg-1" id="education">
+        <div class="section-wrapper anim fade-d">
+          <span class="resume-headline anim fade-d-delay">Education</span>
+          <hr />
+          <p class="resume-title">Associate in Computer Science</p>
+          <p class="resume-subtitle">
+            <a rel="noopener" href="https://century.edu" target="_blank"
+              >Century College</a
+            >
+            - White Bear Lake, Minnesota.
+          </p>
+          <p class="resume-date">
+            January 2021 - December 2023 <span>| 3 years </span>
+          </p>
+          <p class="resume-subtitle">
+            Gpa: 3.95 | Phi Theta Kappa Member | Dean's List
+          </p>
+
+          <hr />
+          <p class="resume-title">Bachelor in Computer Information Systems</p>
+          <p class="resume-subtitle">
+            <a rel="noopener" href="https://estacio.br" target="_blank"
+              >Estácio University</a
+            >
+            - Fortaleza, Ceara, Brazil.
+          </p>
+          <p class="resume-date">
+            January 2012 - December 2014 <span>| 3 years </span> (Did not
+            complete degree)
+          </p>
+          <p class="resume-subtitle">
+            Relevant Coursework: Data Structures, Algorithms, Programming,
+            Computer Organization and Architecture, Web Technologies, Computer
+            Networking, Database Management Systems, etc.
+          </p>
+          <hr />
+          <p class="resume-title">System Development with Java - Certificate</p>
+          <p class="resume-subtitle">
+            <a rel="noopener" href="https://www.senac.br/" target="_blank"
+              >Senac</a
+            >
+            - Fortaleza, Ceara, Brazil.
+          </p>
+          <p class="resume-date">
+            January 2011 - July 2011 <span>| 285 hours </span>
+          </p>
+          <hr />
+          <p class="resume-title">Computer Networking - Certificate</p>
+          <p class="resume-subtitle">
+            <a
+              rel="noopener"
+              href="https://cepepescolatecnica.com.br"
+              target="_blank"
+              >Cepep</a
+            >
+            - Fortaleza, Ceara, Brazil.
+          </p>
+          <p class="resume-date">
+            September 2011 - December 2011 <span>| 120 hours </span>
+          </p>
+        </div>
+      </section>
+      <section class="regular-section bg-2" id="experiences">
+        <div class="section-wrapper anim fade-d">
+          <span class="resume-headline">Experiences</span>
+          <hr />
+          <p class="resume-title">Computer Science & ESL Peer Tutor</p>
+          <p class="resume-subtitle">Century College, White Bear, MN</p>
+          <p class="resume-date">September 2021 - Present</p>
+          <ul class="resume-keypoints">
+            <li>
+              Data Structures & Algorithms, Object Oriented Programming,
+              Introduction to Programming. Computer Organization Systems, Python
+              for programmers, etc
+            </li>
+            <li>
+              Assist students in developing their programming skills and
+              understanding of computer science concepts.
+            </li>
+            <li>
+              Provide personalized instruction in a variety of programming
+              languages and tools.
+            </li>
+            <li>
+              Assisted non-native English speakers with their development of the
+              English language
+            </li>
+          </ul>
+          <p class="resume-skills">
+            <strong>Skills:</strong> Java, JavaScript, Python, C++, Database
+            Management Systems, Assembly
+          </p>
+          <hr />
+          <p class="resume-title">Software Engineer Junior, Full Stack</p>
+          <p class="resume-subtitle">
+            Orsecon Tecnologia, Fortaleza, CE - Brazil
+          </p>
+          <p class="resume-date">
+            June 2013 - January 2015 <span>| 1 year 8 months</span>
+          </p>
+          <ul class="resume-keypoints">
+            <li>
+              Web scrapping projects in Java using Selenium Framework mainly for
+              automation of repetitive tasks
+            </li>
+            <li>
+              Designed and developed a CRM for a property manager: Java, Spring
+              Data JPA, Spring Boot, PostgreSQL, and Jira as an Agile Project
+              management Tool.
+            </li>
+            <li>
+              Designed and Coded over 10 Websites using HTML, CSS,
+              JavaScript/jQuery, and some PHP. Illustrator and Photoshop as
+              UI/UX designing tools.
+            </li>
+          </ul>
+          <p class="resume-skills">
+            <strong>Skills:</strong> JavaScript, Java, PHP, HTML, CSS, SQL, and
+            Photoshop/Illustrator
+          </p>
+          <p class="resume-skills">
+            <strong>Frameworks:</strong> Spring Boot, jQuery, Bootstrap
+          </p>
+          <hr />
+          <p class="resume-title">Software Engineer, Scientific Researcher</p>
+          <p class="resume-subtitle">
+            CNPq - National Scientific and Technological Development Council,
+            Fortaleza, CE - Brazil
+          </p>
+          <p class="resume-date">
+            October 2013 - July 2014 <span>| 10 months</span>
+          </p>
+          <ul class="resume-keypoints">
+            <li>
+              The general objective of the research was to study the IAM
+              Management Identification and Authentication protocols to develop
+              an identity and authentication management application as a SaaS
+              service in the cloud using biometric identification based on
+              keyboard typing dynamics.
+            </li>
+          </ul>
+          <p class="resume-skills">
+            <strong>Skills:</strong> Java, Scientific Research
+          </p>
+          <hr />
+          <p class="resume-title">Software Engineer, Intern</p>
+          <p class="resume-subtitle">Estácio, Fortaleza, CE - Brazil</p>
+          <p class="resume-date">
+            July 2012 - Dec 2012 <span>| 6 months</span>
+          </p>
+          <ul class="resume-keypoints">
+            <li>
+              This internship provided me with practical experience in Java
+              development, bug tracking, debugging, and collaborative
+              problem-solving. It strengthened my coding skills and introduced
+              me to real-world software
+            </li>
+          </ul>
+          <p class="resume-skills">
+            <strong>Skills:</strong> Java, Scientific Research
+          </p>
+          <hr />
+          <p class="resume-title">Image Quality Control Technician</p>
+          <p class="resume-subtitle">
+            Trana Tecnologia, Fortaleza, CE - Brazil
+          </p>
+          <p class="resume-date">
+            June 2013 - Dec 2013 <span>| 7 months</span>
+          </p>
+          <ul class="resume-keypoints">
+            <li>
+              Responsible for examining images of traffic infractions, such as
+              speeding, running red lights, or other violations, captured by
+              automated camera systems. Using dedicated software tools,
+              scrutinized these images to identify any irregularities,
+              inaccuracies, or issues.
+            </li>
+          </ul>
+          <p class="resume-skills">
+            <strong>Skills:</strong> Communication, Teamwork
+          </p>
+        </div>
+      </section>
+      <section class="bg-1" id="portfolio">
+        <div class="portfolio-wrapper anim fade-u">
+          <div class="resume-headline">Explore my portfolio</div>
+          <div class="resume-title">GitHub Repositories</div>
+          <div id="github-repositories"></div>
+          <div class="projects-container anim fade-u">
+            <div class="resume-title">Projects</div>
+            <hr />
+
+            <div class="resume-subtitle">
+              <a href="https://www.addcontractingmn.com"
+                >www.addcontractingmn.com</a
+              >
+            </div>
+            <div class="resume-keypoints">
+              <strong>Technologies used:</strong> JavaScript, PHP, HTML, CSS
+            </div>
+            <div class="resume-keypoints">
+              <strong>Libaries:</strong> SweetAlert.js, PHPMailer
+            </div>
+            <hr />
+            <div class="resume-subtitle">
+              <a href="https://www.joatansampaio.com">www.joatansampaio.com</a>
+            </div>
+            <div class="resume-keypoints">
+              <strong>Technologies used:</strong> JavaScript, HTML, CSS
+            </div>
+            <hr />
+
+            <div class="resume-subtitle">
+              <a href="https://github.com/joatansampaio/PDF-Mapper-Java"
+                >PDF Mapping and scrapping data to Excel</a
+              >
+            </div>
+            <div class="resume-keypoints">
+              <strong>Technologies used:</strong> Java
+            </div>
+            <div class="resume-keypoints">
+              <strong>Frameworks:</strong> Apache POI and Apache PDFBox
+            </div>
+            <div class="resume-description"><strong>Key Features:</strong></div>
+            <ul>
+              <li>PDF Parsing, Data Extraction</li>
+              <li>Data Transformation</li>
+              <li>Excel Export</li>
+              <li>Data Validation</li>
+              <li>Error Handling</li>
+            </ul>
+            <hr />
+
+            <div class="resume-subtitle">CRM - Property Management Company</div>
+            <div class="resume-keypoints">
+              <strong>Technologies used:</strong> Java
+            </div>
+            <div class="resume-keypoints">
+              <strong>Frameworks:</strong> JasperReports
+            </div>
+            <div class="resume-keypoints">
+              <strong>Libraries:</strong> JasperReports, Selenium
+            </div>
+            <div class="resume-keypoints">
+              <strong>Database:</strong> PostgreSQL
+            </div>
+            <div class="resume-description"><strong>Key Features:</strong></div>
+            <ul>
+              <li>Customer Management</li>
+              <li>Rent Tracking</li>
+              <li>Property Management</li>
+              <li>Alerts and Notification</li>
+              <li>Revenue Prediction</li>
+              <li>Reporting</li>
+              <li>Document Management</li>
+              <li>User Access Control</li>
+            </ul>
+            <hr />
+
+            <div class="resume-subtitle">
+              Automation Projects using Selenium
+            </div>
+            <div class="resume-keypoints">
+              <strong>Technologies used:</strong> Java
+            </div>
+            <div class="resume-keypoints">
+              <strong>Libraries:</strong> Selenium
+            </div>
+            <div class="resume-description">
+              <strong>Description:</strong> Automating repetitive tasks, form
+              filling, and login processes.
+            </div>
+            <hr />
           </div>
         </div>
       </section>
-      <section class="horizontal-section" id="last-h-section">
-        <div class="h-s-3-c">
-          <span class="anim">Future plans</span>
-          <div class="anim heading-text">Career Goals</div>
-
-          <div class="col anim">
-            <p>My primary educational goal is to complete my Associate's Degree in Computer Sience (Fall 2023). This
-              accomplishment will serve as a significant milestone in my academic journey, providing me with a strong
-              foundation in the field.
-
-              Upon completion of my Associate's Degree, I aim to leverage the Optional Practical Training (OPT) program
-              to gain practical experience in I.T for a duration of one year. This experience will not only enhance my
-              knowledge but also allow me to apply my academic learnings in a real-world professional setting.</p>
-            <p>Ultimately, I am committed to pursuing my Bachelor's Degree in Computer Science (Fall 2026), further
-              solidifying my
-              expertise in this dynamic field. My long-term aspiration is to establish a rewarding career as a Software
-              Engineer. I am passionate about coding, algorithms, and problem-solving, and I am dedicated to staying
-              updated with the latest technologies to excel in this role.</p>
-          </div>
-        </div>
-      </section>
-    </section>
-
-    <section class="regular-section bg-1" id="education">
-      <div class="section-wrapper">
-        <span class="resume-headline">Education</span>
-        <hr>
-        <p class="resume-title">Associate in Computer Science</p>
-        <p class="resume-subtitle"><a rel="noopener" href="https://century.edu" target="_blank">Century College</a> -
-          White Bear Lake,
-          Minnesota.</p>
-        <p class="resume-date">January 2021 - December 2023 <span>| 3 years </span></p>
-        <p class="resume-subtitle">Gpa: 3.95 | Phi Theta Kappa Member | Dean's List</p>
-
-        <hr>
-        <p class="resume-title">Bachelor in Computer Information Systems</p>
-        <p class="resume-subtitle"><a rel="noopener" href="https://estacio.br" target="_blank">Estácio University</a> -
-          Fortaleza,
-          Ceara, Brazil.</p>
-        <p class="resume-date">January 2012 - December 2014 <span>| 3 years </span> (Did not complete degree)</p>
-        <p class="resume-subtitle">Relevant Coursework: Data Structures, Algorithms, Programming, Computer
-          Organization and
-          Architecture, Web Technologies, Computer Networking, Database Management Systems, etc.</p>
-        <hr>
-        <p class="resume-title">System Development with Java - Certificate</p>
-        <p class="resume-subtitle"><a rel="noopener" href="https://www.senac.br/" target="_blank">Senac</a> - Fortaleza,
-          Ceara, Brazil.
-        </p>
-        <p class="resume-date">January 2011 - July 2011 <span>| 285 hours </span></p>
-        <hr>
-        <p class="resume-title">Computer Networking - Certificate</p>
-        <p class="resume-subtitle"><a rel="noopener" href="https://cepepescolatecnica.com.br" target="_blank">Cepep</a>
-          -
-          Fortaleza,
-          Ceara, Brazil.</p>
-        <p class="resume-date">September 2011 - December 2011 <span>| 120 hours </span></p>
-
-
-      </div>
-    </section>
-    <section class="regular-section bg-2" id="experiences">
-      <div class="section-wrapper">
-        <span class="resume-headline">Experiences</span>
-        <hr>
-        <p class="resume-title">Computer Science & ESL Peer Tutor</p>
-        <p class="resume-subtitle">Century College, White Bear, MN</p>
-        <p class="resume-date">September 2021 - Present</p>
-        <ul class="resume-keypoints">
-          <li>Data Structures & Algorithms, Object Oriented Programming, Introduction to Programming. Computer
-            Organization Systems, Python for programmers, etc</li>
-          <li>Assist students in developing their programming skills and understanding of computer science concepts.
-          </li>
-          <li>Provide personalized instruction in a variety of programming languages and tools.</li>
-          <li>Assisted non-native English speakers with their development of the English language</li>
-        </ul>
-        <p class="resume-skills"><strong>Skills:</strong> Java, JavaScript, Python, C++, Database Management Systems,
-          Assembly</p>
-        <hr>
-        <p class="resume-title">Software Engineer Junior, Full Stack</p>
-        <p class="resume-subtitle">Orsecon Tecnologia, Fortaleza, CE - Brazil</p>
-        <p class="resume-date">June 2013 - January 2015 <span>| 1 year 8 months</span></p>
-        <ul class="resume-keypoints">
-          <li>Web scrapping projects in Java using Selenium Framework mainly for automation of repetitive tasks</li>
-          <li>Designed and developed a CRM for a property manager: Java, Spring Data JPA, Spring Boot, PostgreSQL, and
-            Jira as an Agile Project management Tool.</li>
-          <li>Designed and Coded over 10 Websites using HTML, CSS, JavaScript/jQuery, and some PHP. Illustrator and
-            Photoshop as UI/UX designing tools.</li>
-        </ul>
-        <p class="resume-skills"><strong>Skills:</strong> JavaScript, Java, PHP, HTML, CSS, SQL, and
-          Photoshop/Illustrator</p>
-        <p class="resume-skills"><strong>Frameworks:</strong> Spring Boot, jQuery, Bootstrap</p>
-        <hr>
-        <p class="resume-title">Software Engineer, Scientific Researcher</p>
-        <p class="resume-subtitle">CNPq - National Scientific and Technological Development Council, Fortaleza, CE -
-          Brazil</p>
-        <p class="resume-date">October 2013 - July 2014 <span>| 10 months</span></p>
-        <ul class="resume-keypoints">
-          <li>The general objective of the research was to study the IAM Management Identification and Authentication
-            protocols to develop an identity and authentication management application as a SaaS service in the cloud
-            using biometric identification based on keyboard typing dynamics.</li>
-        </ul>
-        <p class="resume-skills"><strong>Skills:</strong> Java, Scientific Research</p>
-        <hr>
-        <p class="resume-title">Software Engineer, Intern</p>
-        <p class="resume-subtitle">Estácio, Fortaleza, CE - Brazil</p>
-        <p class="resume-date">July 2012 - Dec 2012 <span>| 6 months</span></p>
-        <ul class="resume-keypoints">
-          <li>This internship provided me with practical experience in Java development, bug tracking, debugging, and
-            collaborative problem-solving. It strengthened my coding skills and introduced me to real-world software
-          </li>
-        </ul>
-        <p class="resume-skills"><strong>Skills:</strong> Java, Scientific Research</p>
-        <hr>
-        <p class="resume-title">Image Quality Control Technician</p>
-        <p class="resume-subtitle">Trana Tecnologia, Fortaleza, CE - Brazil</p>
-        <p class="resume-date">June 2013 - Dec 2013 <span>| 7 months</span></p>
-        <ul class="resume-keypoints">
-          <li>Responsible for examining images of traffic infractions, such as speeding, running red lights, or other
-            violations, captured by automated camera systems. Using dedicated software tools, scrutinized these images
-            to identify any irregularities, inaccuracies, or issues.
-          </li>
-        </ul>
-        <p class="resume-skills"><strong>Skills:</strong> Communication, Teamwork</p>
-
-
-      </div>
-    </section>
-    <section class="bg-1" id="portfolio">
-      <div class="portfolio-wrapper">
-
-        <div class="resume-headline">Explore my portfolio</div>
-        <div class="resume-title">GitHub Repositories</div>
-        <div id="github-repositories"></div>
-        <div class="resume-title">Projects</div>
-        <hr>
-
-        <div class="resume-subtitle"><a href="https://www.addcontractingmn.com">www.addcontractingmn.com</a></div>
-        <div class="resume-keypoints"><strong>Technologies used:</strong> JavaScript, PHP, HTML, CSS </div>
-        <div class="resume-keypoints"><strong>Libaries:</strong> SweetAlert.js, PHPMailer</div>
-        <hr>
-        <div class="resume-subtitle"><a href="https://www.joatansampaio.com">www.joatansampaio.com</a></div>
-        <div class="resume-keypoints"><strong>Technologies used:</strong> JavaScript, HTML, CSS </div>
-        <hr>
-
-        <div class="resume-subtitle"><a href="https://github.com/joatansampaio/PDF-Mapper-Java">PDF Mapping and
-            scrapping data to Excel</a></div>
-        <div class="resume-keypoints"><strong>Technologies used:</strong> Java </div>
-        <div class="resume-keypoints"><strong>Frameworks:</strong> Apache POI and Apache PDFBox</div>
-        <div class="resume-description"><strong>Key Features:</strong> </div>
-        <ul>
-          <li>PDF Parsing, Data Extraction</li>
-          <li>Data Transformation</li>
-          <li>Excel Export</li>
-          <li>Data Validation</li>
-          <li>Error Handling</li>
-        </ul>
-        <hr>
-
-        <div class="resume-subtitle">CRM - Property Management Company</div>
-        <div class="resume-keypoints"><strong>Technologies used:</strong> Java </div>
-        <div class="resume-keypoints"><strong>Frameworks:</strong> JasperReports</div>
-        <div class="resume-keypoints"><strong>Libraries:</strong> JasperReports, Selenium</div>
-        <div class="resume-keypoints"><strong>Database:</strong> PostgreSQL</div>
-        <div class="resume-description"><strong>Key Features:</strong> </div>
-        <ul>
-          <li>Customer Management</li>
-          <li>Rent Tracking</li>
-          <li>Property Management</li>
-          <li>Alerts and Notification</li>
-          <li>Revenue Prediction</li>
-          <li>Reporting</li>
-          <li>Document Management</li>
-          <li>User Access Control</li>
-        </ul>
-        <hr>
-
-        <div class="resume-subtitle">Automation Projects using Selenium</div>
-        <div class="resume-keypoints"><strong>Technologies used:</strong> Java </div>
-        <div class="resume-keypoints"><strong>Libraries:</strong> Selenium</div>
-        <div class="resume-description"><strong>Description:</strong> Automating repetitive tasks, form filling, and
-          login processes.</div>
-        <hr>
-
-      </div>
-    </section>
-  </div>
-</body>
-<script src="js/ScrollHandler.js"></script>
-<script src="js/index.js"></script>
-<script src="js/script.js"></script>
-
-
+    </div>
+  </body>
+  <script src="js/ScrollHandler.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/script.js"></script>
 </html>
