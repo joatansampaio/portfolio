@@ -21,7 +21,7 @@
   --font-color: #ebebeb;
 }
 
-/* --------------------------------- EXTERNAL LIBS */
+/* --------------------------------- EXTERNAL LIBS & GLOBALS */
 a {
   color: var(--primary-color-variation);
 }
