@@ -1,15 +1,28 @@
+// Icons
 const githubIcon = document.getElementById("github-icon");
 const linkedinIcon = document.getElementById("linkedin-icon");
 const instagramIcon = document.getElementById("instagram-icon");
-const container = document.querySelector(".horizontal-container");
 const emailIcon = document.getElementById("email-icon");
+
+// Container
+const container = document.querySelector(".horizontal-container");
+
+// Mobile Menu
 const menuSmall = document.querySelector(".mobile-menu--items");
 const menuSmallCheckbox = document.getElementById("hamb-check");
+
+// Scroll Links
 const scrollLinks = document.querySelectorAll(".menu-link");
+
+// Animation Elements
 const jelly = document.querySelector('.jelly');
 const jellyAnimation = document.querySelector('.jelly-animation');
+const animatedElements = document.querySelectorAll(".anim");
 
-document.addEventListener('DOMContentLoaded', function () {
+// Sections
+const firstSection = document.querySelector(".h-s-1-c");
+
+document.addEventListener('DOMContentLoaded', () => {
     const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
     if (prefersDarkMode) {
@@ -21,24 +34,31 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-const animatedElements = document.querySelectorAll(".anim");
+document.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const viewHeight = window.innerHeight;
+    const scrollPercentage = (scrollY / viewHeight);
+
+    firstSection.style.opacity = 1 - scrollPercentage;
+    firstSection.style.transform = `translateY(-${scrollPercentage * 70}px)`
+})
+
 
 const animationObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      var animation = entry.target.classList;
-      if (animation.contains("fade-u")) {
-            entry.target.classList.add("fade-up");
-      }
-      if (animation.contains("fade-d")) {
-        entry.target.classList.add("fade-down");
-      }
-    }
-  })
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            if (entry.target.classList.contains("fade-u")) {
+                entry.target.classList.add("fade-up");
+            }
+            if (entry.target.classList.contains("fade-d")) {
+                entry.target.classList.add("fade-down");
+            }
+        }
+    })
 })
 
 animatedElements.forEach((element) => {
-  animationObserver.observe(element);
+    animationObserver.observe(element);
 });
 
 document.getElementById("theme-btn").addEventListener('click', () => {
@@ -68,7 +88,7 @@ scrollLinks.forEach((link) => {
 
 
         if (targetId == "#intro") {
-            scrollTo(0);
+            goToY(0);
         } else {
 
         }
@@ -111,11 +131,11 @@ function handlePrevNextBtn(e) {
 
     if (targetSectionIndex >= 0 && targetSectionIndex < horizontalSections.length) {
         targetX = targetSectionIndex * content.clientWidth;
-        scrollTo(targetX);
+        goToY(targetX);
     } else if (currentSectionIndex === 0) {
-        scrollTo(2 * content.clientWidth);
+        goToY(2 * content.clientWidth);
     } else {
-        scrollTo(0);
+        goToY(0);
     }
 
     setTimeout(() => {

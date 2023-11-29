@@ -1,6 +1,7 @@
+const scrollToIntroBtns = document.querySelectorAll(".scroll-to-intro");
 const scrollSpeed = 0.1;
 
-function scrollTo(x) {
+function goToY(x) {
 
     const animate = () => {
         scrollX += (x - scrollX) * scrollSpeed;
@@ -27,15 +28,13 @@ window.addEventListener('resize', () => {
     }
 })
 
-function isElementInViewport(e) {
-    const rect = e.getBoundingClientRect();
-    return rect.bottom >= 50;
-}
-
-function isElementNotTotallyInViewPort(e) {
-    const rect = e.getBoundingClientRect();
-    return rect.bottom > 50;
-}
-
+scrollToIntroBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+    })
+});
 
 
